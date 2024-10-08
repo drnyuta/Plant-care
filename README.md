@@ -19,9 +19,7 @@ This plant care assistant is designed to help users maintain healthy, thriving p
 
 - **Personal Calendar/Trackers**: Integration with Google Calendar allows setting and managing reminders for watering, fertilizing, and repotting.
 - **Weather APIs**: Real-time weather updates can help provide context-specific advice (e.g., adjusting watering schedules based on local rainfall or temperature).
-- **Soil Moisture Sensors**: Gather real-time moisture levels to adjust watering reminders.
-- **Light Sensors**: Measure sunlight exposure for optimal light positioning.
-- **Humidity Sensors**: Track air moisture levels to ensure proper humidity for the plants.
+- **Personal Input**: Information about plants and their location will help to provide personalized recommendations.
 
 ### Knowledge Sources
 
