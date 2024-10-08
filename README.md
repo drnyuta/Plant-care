@@ -34,4 +34,4 @@ This plant care assistant is designed to help users maintain healthy, thriving p
 - Yauheniya Kavalchuk (kavalchuk.yauheniya@student.ehu.lt)
 - Katsiaryna Tsikhanovich(tsikhanovich.katsiaryna@student.ehu.lt)
 - Kanstantsin Kernazhytski (kernazhytski.kanstantsin@student.ehu.lt)
-- Alena 
+- Alena Tsibets (tsibets.alena@student.ehu.lt)
