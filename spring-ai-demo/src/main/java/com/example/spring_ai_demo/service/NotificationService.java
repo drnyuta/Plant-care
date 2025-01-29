@@ -1,6 +1,6 @@
-package notif_feature.service;
+package com.example.spring_ai_demo.service;
 
-import notif_feature.model.Notification;
+import com.example.spring_ai_demo.model.Notification;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package notif_feature.model;
+package com.example.spring_ai_demo.model;
 
 import java.time.LocalDateTime;
 

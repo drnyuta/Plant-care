@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Plant Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <div>
@@ -12,6 +13,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/advices">Plant Care Advice</a></li>
+            <li><a href="/notifications">Plant Care Notifications</a></li>
         </ul>
     </nav>
 </div>
@@ -35,7 +37,7 @@
                 plantItem.innerHTML = `
                     <p>Name: ${plant.name}</p>
                     <p>Type: ${plant.type}</p>
-                    <p>Info: ${plant.info}</p>
+                    <p>Type: ${plant.info}</p>
                     <img src="${plant.image}" alt="Plant Image" width="100" height="100"/>
                 `;
                 // Append to the plant list

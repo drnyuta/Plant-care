@@ -1,111 +1,189 @@
+/* Import Garamond font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Garamond&display=swap');
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f9f4; /* Light greenish background */
-    color: #3e3e3e; /* Dark grey text */
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling for a light and fresh theme */
+body {
+    background-color: #f5f5f5; /* Light background */
+    color: #333; /* Dark text for readability */
+    font-family: 'Garamond', serif; /* Apply Garamond font */
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Header */
+h1, h2 {
+    color: #2d6a4f; /* Fresh green color for headers */
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Garamond', serif; /* Ensure Garamond is applied to headers */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #52b788; /* Fresh green background */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center; /* Center-align the nav bar */
+}
+
+nav ul {
+    display: inline-flex; /* Align the links horizontally in the center */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    font-family: 'Garamond', serif; /* Apply Garamond font to links */
+}
+
+nav ul li a:hover {
+    color: #f0f4c3; /* Light yellowish color on hover */
+}
+
+/* Button Styling */
+button {
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+    font-family: 'Garamond', serif; /* Apply Garamond font to buttons */
+}
+
+button:hover {
+    background-color: #388e3c; /* Slightly darker green on hover */
+}
+
+/* Forms & Input */
+input[type="text"], input[type="file"], input[type="datetime-local"], textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Garamond', serif; /* Apply Garamond font to form inputs */
+}
+
+input[type="text"]:focus, input[type="file"]:focus, input[type="datetime-local"]:focus, textarea:focus {
+    outline: none;
+    border-color: #2d6a4f; /* Green border on focus */
 }
 
 /* Container */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h1 {
-    color: #388e3c; /* Deep green */
-    font-size: 3rem;
-    margin: 0;
-    font-family: 'Verdana', sans-serif;
-}
-
-/* Form Styling */
 .notifications-form {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
-.notifications-form h2 {
-    color: #388e3c;
-    font-size: 2rem;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    font-size: 1rem;
-}
-
-textarea {
-    resize: vertical;
-    height: 150px;
-}
-
-/* Button */
-button {
-    background-color: #388e3c;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #2e7d32;
-}
-
-/* Notifications List */
 .notifications-list ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .notifications-list li {
     background-color: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .notifications-list li p {
-    margin: 5px 0;
+    color: #333;
 }
 
-.notifications-list li em {
-    font-style: italic;
-    color: #7b7b7b;
+.notifications-list li p strong {
+    color: #2d6a4f; /* Green color for the message */
 }
 
-.notifications-list li strong {
-    font-size: 1.1rem;
-    color: #388e3c;
+.notifications-list li p em {
+    color: #888; /* Lighter text color for date */
+}
+
+/* Plant List Item */
+#plant-list li {
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#plant-list li:hover {
+    transform: scale(1.05); /* Hover effect to zoom in */
+}
+
+#plant-list img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Plant Detail Section */
+.plant-detail {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.plant-detail h3 {
+    color: #2d6a4f; /* Fresh green */
+}
+
+.plant-detail p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Center items vertically on small screens */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    button {
+        width: auto;
+    }
 }

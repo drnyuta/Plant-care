@@ -8,6 +8,6 @@ public class MainPageController {
 
     @GetMapping("/")
     public String showMainPage() {
-        return "mainPage"; // Serve the main page
+        return "mainPage";
     }
 }

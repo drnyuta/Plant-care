@@ -32,7 +32,12 @@ public class PlantController {
         return plantService.getAllPlants();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/plants")
+    public List<Plant> getPlants() {
+        return plantService.getAllPlants();
+    }
+
+    @GetMapping("/plant/{id}")
     public ResponseEntity<Plant> getPlantById(@PathVariable Long id) {
         Optional<Plant> plant = plantService.getPlantById(id);
         return plant.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -53,26 +58,26 @@ public class PlantController {
     public ResponseEntity<String> addPlant(@RequestParam("name") String name,
                            @RequestParam("type") String type,
                            @RequestParam("info") String info,
-                           @RequestParam("image") MultipartFile image,
+                          // @RequestParam("image") MultipartFile image,
                            Model model) throws IOException {
 
         // Save the image file to the server
-        if (!image.isEmpty()) {
-            String imageName = image.getOriginalFilename();
-            Path path = Paths.get(UPLOADED_FOLDER + imageName);
-            image.transferTo(path);
+//        if (!image.isEmpty()) {
+//            String imageName = image.getOriginalFilename();
+//            Path path = Paths.get(UPLOADED_FOLDER + imageName);
+//            image.transferTo(path);
 
             // Create the plant object
             Plant newPlant = new Plant();
             newPlant.setName(name);
             newPlant.setType(type);
             newPlant.setInfo(info);
-            newPlant.setImage(imageName);
+            newPlant.setImage(null);
 
             plantService.addPlant(newPlant);
             return ResponseEntity.ok("Plant added successfully!");
-        } else {
-            return ResponseEntity.badRequest().body("Image file is required!");
-        }
+//        } else {
+//            return ResponseEntity.badRequest().body("Image file is required!");
+//        }
     }
 }

@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Generate Response</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <div>
@@ -10,10 +11,11 @@
             <li><a href="/">Home</a></li>
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/advices">Plant Care Advice</a></li>
+            <li><a href="/notifications">Plant Care Notifications</a></li>
         </ul>
     </nav>
 </div>
-<h1>Ask Llama AI</h1>
+<h1>Ask for advice!</h1>
 <form action="/generate" method="POST">
     <label for="prompt">Enter your prompt:</label><br><br>
     <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea><br><br>
@@ -21,7 +23,7 @@
 </form>
 
 <div th:if="${response}">
-    <h2>Response from Llama AI:</h2>
+    <h2>Response for you:</h2>
     <pre th:utext="${response}"></pre>
 </div>
 

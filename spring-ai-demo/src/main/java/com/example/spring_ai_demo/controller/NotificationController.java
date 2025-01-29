@@ -1,8 +1,8 @@
-package notif_feature.controller;
+package com.example.spring_ai_demo.controller;
 
 
-import notif_feature.model.Notification;
-import notif_feature.service.NotificationService;
+import com.example.spring_ai_demo.model.Notification;
+import com.example.spring_ai_demo.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
