@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Plant Dashboard</title>
+</head>
+<body>
+<div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/advices">Plant Care Advice</a></li>
+        </ul>
+    </nav>
+</div>
+<h1>Plant Dashboard</h1>
+
+<a href="/add">Add a New Plant</a>
+
+<ul id="plant-list">
+    <!-- Plant items will be dynamically added here -->
+</ul>
+
+<script>
+    // Fetch plant data from the backend
+    fetch('/api/plants')
+        .then(response => response.json())
+        .then(plants => {
+            const plantList = document.getElementById('plant-list');
+            plants.forEach(plant => {
+                // Create list item for each plant
+                const plantItem = document.createElement('li');
+                plantItem.innerHTML = `
+                    <p>Name: ${plant.name}</p>
+                    <p>Type: ${plant.type}</p>
+                    <p>Info: ${plant.info}</p>
+                    <img src="${plant.image}" alt="Plant Image" width="100" height="100"/>
+                `;
+                // Append to the plant list
+                plantList.appendChild(plantItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching plant data:', error);
+        });
+</script>
+</body>
+</html>
