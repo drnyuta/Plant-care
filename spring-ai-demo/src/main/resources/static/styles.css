@@ -1,0 +1,111 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f4; /* Light greenish background */
+    color: #3e3e3e; /* Dark grey text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #388e3c; /* Deep green */
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Form Styling */
+.notifications-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.notifications-form h2 {
+    color: #388e3c;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Button */
+button {
+    background-color: #388e3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+/* Notifications List */
+.notifications-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-list li p {
+    margin: 5px 0;
+}
+
+.notifications-list li em {
+    font-style: italic;
+    color: #7b7b7b;
+}
+
+.notifications-list li strong {
+    font-size: 1.1rem;
+    color: #388e3c;
+}

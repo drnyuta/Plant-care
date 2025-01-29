@@ -23,7 +23,7 @@ public class LlamaAIController {
 
     @PostMapping("/generate")
     public String generate(@RequestParam String prompt, Model model) {
-        // Call the Llama AI service and get the response
+
         String response = llamaAIService.getLlamaAIResponse(prompt);
 
         // Add the response to the model to be displayed on the page
