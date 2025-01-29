@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Notifications</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Plant Care Notifications</h1>
+    </header>
+
+    <div class="notifications-form">
+        <h2>Add New Notification</h2>
+        <form action="/notifications/add" method="POST">
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="What do you want to do with your plant?" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="dateTime">Date and Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required>
+            </div>
+            <button type="submit">Add Notification</button>
+        </form>
+    </div>
+
+    <div class="notifications-list">
+        <h2>Your Notifications</h2>
+        <ul>
+            <th:block th:each="notification : ${notifications}">
+                <li>
+                    <p><strong th:text="${notification.message}"></strong></p>
+                    <p><em th:text="'Due: ' + ${notification.dateTime}"></em></p>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
