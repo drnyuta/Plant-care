@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Generate Response</title>
+</head>
+<body>
+<h1>Ask Llama AI</h1>
+<form action="/generate" method="POST">
+    <label for="prompt">Enter your prompt:</label><br><br>
+    <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea><br><br>
+    <button type="submit">Generate Response</button>
+</form>
+
+<div th:if="${response}">
+    <h2>Response from Llama AI:</h2>
+    <pre th:utext="${response}"></pre>
+</div>
+
+</body>
+</html>
