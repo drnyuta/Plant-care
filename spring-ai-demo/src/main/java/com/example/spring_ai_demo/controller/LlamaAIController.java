@@ -16,9 +16,9 @@ public class LlamaAIController {
         this.llamaAIService = llamaAIService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/advices")
     public String showForm() {
-        return "index"; // Thymeleaf template name
+        return "advices"; // Thymeleaf template name
     }
 
     @PostMapping("/generate")
@@ -28,6 +28,6 @@ public class LlamaAIController {
 
         // Add the response to the model to be displayed on the page
         model.addAttribute("response", response);
-        return "index"; // Return the same page with the response displayed
+        return "advices"; // Return the same page with the response displayed
     }
 }

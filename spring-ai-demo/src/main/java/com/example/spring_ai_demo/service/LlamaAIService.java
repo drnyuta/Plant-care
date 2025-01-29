@@ -72,10 +72,6 @@ public class LlamaAIService {
 
     // Method to format the response text
     private String formatResponse(String response) {
-        // Ensure it ends with "and think."
-        if (!response.endsWith("and think.")) {
-            response = response + " and think.";
-        }
 
         // Replace **bold** text formatting
         response = response.replaceAll("\\*\\*(.*?)\\*\\*", "<b>$1</b>");
